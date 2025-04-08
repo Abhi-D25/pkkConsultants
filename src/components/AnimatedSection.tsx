@@ -1,12 +1,16 @@
-
 import { useEffect, useRef, ReactNode } from 'react';
 
 interface AnimatedSectionProps {
   children: ReactNode;
   delay?: number;
+  direction?: 'up' | 'right' | 'left';
 }
 
-const AnimatedSection = ({ children, delay = 0 }: AnimatedSectionProps) => {
+const AnimatedSection = ({ 
+  children, 
+  delay = 0, 
+  direction = 'up' 
+}: AnimatedSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +25,7 @@ const AnimatedSection = ({ children, delay = 0 }: AnimatedSectionProps) => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
 
     if (sectionRef.current) {
@@ -35,8 +39,17 @@ const AnimatedSection = ({ children, delay = 0 }: AnimatedSectionProps) => {
     };
   }, [delay]);
 
+  // Add subtle initial transform based on direction
+  const directionClass = 
+    direction === 'up' ? 'translate-y-8' : 
+    direction === 'right' ? '-translate-x-8' : 
+    direction === 'left' ? 'translate-x-8' : 'translate-y-8';
+
   return (
-    <div ref={sectionRef} className="animate-on-scroll">
+    <div 
+      ref={sectionRef} 
+      className={`animate-on-scroll opacity-0 transform ${directionClass} transition-all duration-700 ease-out`}
+    >
       {children}
     </div>
   );

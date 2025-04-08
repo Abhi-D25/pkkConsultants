@@ -37,9 +37,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+        <label htmlFor="name" className="block text-sm font-light mb-2 text-gray-600">
           Name
         </label>
         <input
@@ -49,13 +49,13 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
           placeholder="Your Name"
         />
       </div>
       
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+        <label htmlFor="email" className="block text-sm font-light mb-2 text-gray-600">
           Email
         </label>
         <input
@@ -65,13 +65,13 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
           placeholder="Your Email"
         />
       </div>
       
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium mb-2">
+        <label htmlFor="phone" className="block text-sm font-light mb-2 text-gray-600">
           Phone Number
         </label>
         <input
@@ -80,13 +80,13 @@ const ContactForm = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
           placeholder="Your Phone Number"
         />
       </div>
       
       <div>
-        <label htmlFor="projectType" className="block text-sm font-medium mb-2">
+        <label htmlFor="projectType" className="block text-sm font-light mb-2 text-gray-600">
           Project Type
         </label>
         <select
@@ -95,21 +95,18 @@ const ContactForm = () => {
           value={formData.projectType}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
         >
           <option value="">Select Project Type</option>
-          <option value="Commercial">Commercial</option>
-          <option value="Residential">Residential</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Hospitality">Hospitality</option>
-          <option value="Industrial">Industrial</option>
-          <option value="Infrastructure">Infrastructure</option>
+          <option value="MEP Engineering">MEP Engineering</option>
+          <option value="Architecture">Architecture</option>
+          <option value="Interior Design">Interior Design</option>
           <option value="Other">Other</option>
         </select>
       </div>
       
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+        <label htmlFor="message" className="block text-sm font-light mb-2 text-gray-600">
           Message
         </label>
         <textarea
@@ -119,16 +116,16 @@ const ContactForm = () => {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
           placeholder="Tell us about your project"
         ></textarea>
       </div>
       
       <Button 
         type="submit" 
-        className="bg-pkkc-gold hover:bg-pkkc-gold/90 text-pkkc-navy font-medium text-lg px-6 py-3 w-full"
+        className="bg-pkkc-primary hover:bg-pkkc-primary/90 text-white font-light text-lg px-6 py-3 w-full mt-4"
       >
-        Submit Request
+        Submit
       </Button>
     </form>
   );

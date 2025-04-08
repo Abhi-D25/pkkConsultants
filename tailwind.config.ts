@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,12 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Company colors
+				// Company colors - updated to grayscale
 				pkkc: {
-					gold: '#D4AF37',
-					navy: '#1A1F2C',
-					light: '#F6F6F7',
-					dark: '#222222',
+					primary: '#333333',    // Dark gray (replaces gold)
+					secondary: '#555555',  // Medium gray (replaces navy)
+					light: '#F5F5F5',      // Light gray
+					dark: '#1A1A1A',       // Very dark gray
+					accent: '#888888',     // Accent gray
+					matte: '#4A4A4A',      // Matte finish gray
 				}
 			},
 			fontFamily: {
@@ -96,17 +97,31 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out forwards'
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-fade-in-up': 'slide-fade-in-up 1.2s ease-out forwards'
 			},
 			backgroundImage: {
-				'hero-pattern': 'linear-gradient(rgba(26, 31, 44, 0.85), rgba(26, 31, 44, 0.95)), url("/public/lovable-uploads/25fd4482-9674-4c46-9d7c-54c1f773ad55.png")',
+				'hero-pattern': 'linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.95)), url("/images/hero-placeholder.jpg")',
 			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/aspect-ratio')
+	],
 } satisfies Config;

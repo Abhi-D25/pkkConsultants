@@ -14,37 +14,45 @@ const Hero = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
-    <section className="relative h-screen flex items-center">
-      {/* Background color */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pkkc-navy to-pkkc-navy/90">
-        <div className="absolute inset-0 bg-black/10"></div>
+    <section className="relative min-h-screen flex items-center">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 bg-gray-900">
+        <img 
+          src="/images/hero-placeholder.jpg" 
+          alt="PKKC Hero" 
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-fade-in">
-            Engineering Tomorrow's Spaces with Precision, Innovation & Sustainability
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6 animate-slide-fade-in-up">
+            Seamless Spaces, Engineered Excellence
           </h1>
-          <p className="text-xl text-gray-200 mb-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            PK Kalra Consultants (PKKC) is a leading multidisciplinary engineering consultancy delivering seamless design solutions since 2002.
+          <p className="text-xl text-gray-200 mb-10 animate-slide-fade-in-up font-light tracking-wide" style={{ animationDelay: '0.2s' }}>
+            Integrated Architecture, Interior & MEP Solutions
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <p className="text-lg text-gray-300 mb-12 animate-slide-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            One-stop solutions that blend creative vision with engineering precision.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
-                <Button className="bg-pkkc-gold hover:bg-pkkc-gold/90 text-pkkc-navy font-medium text-lg px-8 py-6">
-                  Request a Consultation
+                <Button className="bg-white hover:bg-gray-200 text-gray-900 font-normal text-lg px-8 py-6">
+                  Book a Free Consultation
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[500px]">
                 <DialogHeader>
-                  <DialogTitle className="text-xl mb-4">Request a Consultation</DialogTitle>
+                  <DialogTitle className="text-xl mb-4 font-light">Request a Consultation</DialogTitle>
                 </DialogHeader>
                 <ContactForm />
               </DialogContent>
             </Dialog>
-            <Button asChild className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-medium text-lg px-8 py-6">
-              <Link to="/services">Explore Our Services</Link>
+            <Button asChild className="bg-transparent border border-white hover:bg-white/10 text-white font-normal text-lg px-8 py-6">
+              <Link to="/portfolio">View Our Portfolio</Link>
             </Button>
           </div>
         </div>
