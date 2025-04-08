@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 
@@ -6,6 +5,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     projectType: '',
     message: ''
   });
@@ -27,6 +27,7 @@ const ContactForm = () => {
     setFormData({
       name: '',
       email: '',
+      phone: '',
       projectType: '',
       message: ''
     });
@@ -66,6 +67,21 @@ const ContactForm = () => {
           required
           className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
           placeholder="Your Email"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="phone" className="block text-sm font-medium mb-2">
+          Phone Number
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pkkc-gold"
+          placeholder="Your Phone Number"
         />
       </div>
       

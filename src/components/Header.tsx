@@ -1,12 +1,12 @@
-
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +27,19 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleLinkClick = (path: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Close mobile menu if open
+    setIsMobileMenuOpen(false);
+    // Navigate to the page
+    navigate(path);
+    // Smooth scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -34,7 +47,7 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" onClick={handleLinkClick('/')}>
           <img 
             src="/lovable-uploads/bbb6bb24-36d2-4c76-b31b-49d9b71d2cc5.png" 
             alt="PK Kalra Consultants Logo" 
@@ -44,20 +57,20 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors">
+          <a href="/" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/')}>
             Home
-          </Link>
-          <Link to="/about" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors">
+          </a>
+          <a href="/about" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/about')}>
             About Us
-          </Link>
-          <Link to="/services" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors">
+          </a>
+          <a href="/services" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/services')}>
             Services
-          </Link>
-          <Link to="/contact" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors">
+          </a>
+          <a href="/contact" className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/contact')}>
             Contact
-          </Link>
+          </a>
           <Button asChild className="bg-pkkc-gold hover:bg-pkkc-gold/90 text-white">
-            <Link to="/contact">Request Consultation</Link>
+            <a href="/contact" onClick={handleLinkClick('/contact')}>Request Consultation</a>
           </Button>
         </nav>
 
@@ -76,40 +89,39 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link 
-                to="/" 
+              <a 
+                href="/" 
                 className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick('/')}
               >
                 Home
-              </Link>
-              <Link 
-                to="/about" 
+              </a>
+              <a 
+                href="/about" 
                 className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick('/about')}
               >
                 About Us
-              </Link>
-              <Link 
-                to="/services" 
+              </a>
+              <a 
+                href="/services" 
                 className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick('/services')}
               >
                 Services
-              </Link>
-              <Link 
-                to="/contact" 
+              </a>
+              <a 
+                href="/contact" 
                 className="font-medium text-pkkc-navy hover:text-pkkc-gold transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleLinkClick('/contact')}
               >
                 Contact
-              </Link>
+              </a>
               <Button 
                 asChild 
                 className="bg-pkkc-gold hover:bg-pkkc-gold/90 text-white w-full mt-2"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
-                <Link to="/contact">Request Consultation</Link>
+                <a href="/contact" onClick={handleLinkClick('/contact')}>Request Consultation</a>
               </Button>
             </nav>
           </div>
