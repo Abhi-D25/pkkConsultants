@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="inline-block mb-6">
               <img 
-                src="/lovable-uploads/efde99c1-0ca9-46f4-a92e-46ec97b77399.png" 
+                src="/lovable-uploads/bbb6bb24-36d2-4c76-b31b-49d9b71d2cc5.png" 
                 alt="PK Kalra Consultants Logo" 
                 className="h-16" 
               />

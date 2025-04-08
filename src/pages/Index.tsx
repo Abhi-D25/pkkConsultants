@@ -131,7 +131,7 @@ const Index = () => {
             <AnimatedSection>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/aa4302d5-d39b-4c7b-a8d1-2d852d034dd2.png" 
+                  src="/lovable-uploads/5231f21c-77d3-43cd-b76d-d8c3df34b88e.png" 
                   alt="Parveen Kumar Kalra, Founder" 
                   className="w-full h-auto" 
                 />

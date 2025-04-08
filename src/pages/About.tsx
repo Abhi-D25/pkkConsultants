@@ -46,7 +46,7 @@ const About = () => {
             <AnimatedSection delay={400}>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/25fd4482-9674-4c46-9d7c-54c1f773ad55.png" 
+                  src="/lovable-uploads/19aa26bc-fc07-4c50-97a1-72dad6ec51c3.png" 
                   alt="Engineering Excellence" 
                   className="w-full h-auto" 
                 />
@@ -111,7 +111,7 @@ const About = () => {
             <AnimatedSection delay={200}>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/aa4302d5-d39b-4c7b-a8d1-2d852d034dd2.png" 
+                  src="/lovable-uploads/5231f21c-77d3-43cd-b76d-d8c3df34b88e.png" 
                   alt="Parveen Kumar Kalra, Founder and CEO" 
                   className="w-full h-auto" 
                 />
