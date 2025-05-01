@@ -1,4 +1,4 @@
-import { Fan, Lightbulb, Droplets, Home, Layers, FileSearch } from 'lucide-react';
+import { Fan, Lightbulb, Droplets, Home, Layers, FileSearch, Award } from 'lucide-react';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import ServiceCard from '@/components/ServiceCard';
@@ -8,15 +8,16 @@ import CTA from '@/components/CTA';
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Updated Hero text is within the Hero component */}
       <Hero />
 
-      {/* About Section */}
+      {/* About Section - Updated content */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection>
             <SectionTitle 
-              title="Integrated Solutions" 
-              subtitle="Architecture, Interior & MEP Services"
+              title="Welcome to PKKC" 
+              subtitle="Engineering Excellence Meets Design Innovation"
             />
           </AnimatedSection>
 
@@ -24,31 +25,33 @@ const Index = () => {
             <AnimatedSection delay={200}>
               <div>
                 <p className="text-lg text-gray-600 mb-8 font-light leading-relaxed">
-                  PKKC is a distinguished engineering and design consulting firm, now expanding its expertise beyond MEP engineering to include Architecture and Interior Design. With a legacy of designing sustainable and high-performing building and township systems, we now provide a comprehensive, one-stop solution that seamlessly integrates engineering precision with architectural creativity.
+                  <span className="font-medium">PKKC</span> is a distinguished Engineering and Design consulting firm with a proud legacy in MEP Engineering, <span className="font-medium">now expanding its scope to include Architecture and Interior Design.</span>
                 </p>
                 <p className="text-lg text-gray-600 mb-8 font-light leading-relaxed">
-                  By expanding into Architecture and Interior Design, we ensure that our projects are not only structurally efficient but also aesthetically refined and user-centric. Our approach balances functionality, sustainability, and design innovation, making us a true multidisciplinary firm.
+                  With decades of experience in designing sustainable and high-performing building and township systems, we now offer a comprehensive, one-stop solution that fuses engineering precision with architectural creativity.
+                </p>
+                <p className="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                  <span className="font-medium">Our expansion into Architecture and Interior Design ensures that every project is not only Engineered efficiently but also aesthetically refined, user-centric, and Vastu compliant.</span> As a true multidisciplinary firm, we embrace an integrated approach that balances functionality, innovation, and sustainability.
+                </p>
+                <p className="text-lg text-gray-600 mb-8 font-light leading-relaxed">
+                  At PKKC, we are committed to the principles of green building and are actively engaged in designing Zero Liquid Discharge (ZLD) projects to promote environmental responsibility.
                 </p>
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
-                  The measure of our success is reflected in the quality of our longstanding relationships and our impressive 90% repeat business rate. We deliver projects that are on time, cost-effective, sustainable, energy optimized, and aesthetically superior.
+                  Our success is defined by long-standing client relationships and a remarkable 90% repeat business rate—testament to the trust we've built through timely delivery, cost-effective solutions, and excellence in both design and performance.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={400}>
               <div className="bg-gray-100 p-10 rounded-sm">
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-center">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">20+</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="text-center col-span-1 md:col-span-3">
+                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">25+</h3>
                     <p className="text-gray-600 font-light">Years Experience</p>
                   </div>
                   <div className="text-center">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">500+</h3>
+                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">200+</h3>
                     <p className="text-gray-600 font-light">Projects Completed</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">50+</h3>
-                    <p className="text-gray-600 font-light">Expert Professionals</p>
                   </div>
                   <div className="text-center">
                     <h3 className="text-5xl font-light text-pkkc-primary mb-3">90%</h3>
@@ -125,9 +128,9 @@ const Index = () => {
             <AnimatedSection delay={700}>
               <a href="/services" className="block h-full transition-transform duration-300 hover:transform hover:scale-105">
                 <ServiceCard 
-                  icon={<FileSearch className="text-pkkc-matte" size={40} />}
-                  title="BIM & Infrastructure"
-                  description="BIM integration, peer reviews, infrastructure assessments, and master planning for high-performance township development."
+                  icon={<Award className="text-pkkc-matte" size={40} />}
+                  title="Specialised Services"
+                  description="Environmental policies, ISO consultancy, impact assessment studies, Vastu-compliant design solutions, and façade design & optimization."
                 />
               </a>
             </AnimatedSection>
@@ -135,8 +138,76 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Specialized Services Section */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <AnimatedSection>
+            <SectionTitle 
+              title="Specialised Services" 
+              subtitle="Our additional expertise to enhance your projects"
+            />
+          </AnimatedSection>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-12">
+            <AnimatedSection delay={200}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">Environmental Policies</p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={250}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">ISO-9001 : 2000 consultancy and auditing</p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={300}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">Environmental Impact Assessment Studies</p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={350}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">Cost-effective solutions to High-End, customized luxury spaces</p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={400}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">Vastu-Compliant Design Solutions</p>
+              </div>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={450}>
+              <div className="flex items-start">
+                <div className="mr-4 mt-1 text-pkkc-primary">
+                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+                </div>
+                <p className="text-gray-700 font-light">Façade Design & Optimization</p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection>
             <SectionTitle 
