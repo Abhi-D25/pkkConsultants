@@ -44,8 +44,8 @@ const Index = () => {
 
             <AnimatedSection delay={400}>
               <div className="bg-gray-100 p-10 rounded-sm">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="text-center col-span-1 md:col-span-3">
+                <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+                  <div className="text-center col-span-2">
                     <h3 className="text-5xl font-light text-pkkc-primary mb-3">25+</h3>
                     <p className="text-gray-600 font-light">Years Experience</p>
                   </div>
@@ -148,58 +148,70 @@ const Index = () => {
             />
           </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <AnimatedSection delay={200}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">Environmental Policies</p>
                 </div>
-                <p className="text-gray-700 font-light">Environmental Policies</p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={250}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">ISO-9001 : 2000 consultancy and auditing</p>
                 </div>
-                <p className="text-gray-700 font-light">ISO-9001 : 2000 consultancy and auditing</p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={300}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">Environmental Impact Assessment Studies</p>
                 </div>
-                <p className="text-gray-700 font-light">Environmental Impact Assessment Studies</p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={350}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">Cost-effective solutions to High-End, customized luxury spaces</p>
                 </div>
-                <p className="text-gray-700 font-light">Cost-effective solutions to High-End, customized luxury spaces</p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={400}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">Vastu-Compliant Design Solutions</p>
                 </div>
-                <p className="text-gray-700 font-light">Vastu-Compliant Design Solutions</p>
               </div>
             </AnimatedSection>
             
             <AnimatedSection delay={450}>
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-pkkc-primary">
-                  <div className="w-2 h-2 bg-pkkc-primary rounded-full"></div>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 border-l-4 border-l-pkkc-gold group hover:translate-y-[-5px] h-full">
+                <div className="flex items-start h-full">
+                  <div className="mr-4 mt-1 text-pkkc-primary">
+                    <div className="w-3 h-3 bg-pkkc-gold rounded-full group-hover:scale-110 transition-transform duration-300"></div>
+                  </div>
+                  <p className="text-gray-700 font-light group-hover:text-pkkc-darkGold transition-colors">Façade Design & Optimization</p>
                 </div>
-                <p className="text-gray-700 font-light">Façade Design & Optimization</p>
               </div>
             </AnimatedSection>
           </div>
@@ -218,8 +230,8 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
             <AnimatedSection>
-              <div className="p-8 bg-pkkc-primary/5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
-                <h3 className="text-xl font-light mb-6">Our Mission</h3>
+              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:rotate-1">
+                <h3 className="text-xl font-light mb-6 text-pkkc-darkGold">Our Mission</h3>
                 <p className="text-2xl font-light text-pkkc-primary leading-relaxed">
                   To deliver sustainable, innovative, and seamlessly integrated design solutions that are functional, aesthetic, and implementable while developing efficient methodologies for successful project execution.
                 </p>
@@ -227,8 +239,8 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div className="p-8 bg-pkkc-primary/5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
-                <h3 className="text-xl font-light mb-6">Our Vision</h3>
+              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:-rotate-1">
+                <h3 className="text-xl font-light mb-6 text-pkkc-darkGold">Our Vision</h3>
                 <p className="text-2xl font-light text-pkkc-primary leading-relaxed">
                   To become a leading multidisciplinary design firm, recognized for our holistic approach to architecture and engineering, creating timeless, efficient, and inspiring spaces that stand the test of time.
                 </p>
