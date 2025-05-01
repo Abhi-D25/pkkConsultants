@@ -13,7 +13,7 @@ const SectionTitle = ({
 }: SectionTitleProps) => {
   return (
     <div className={`mb-12 ${alignment === 'center' ? 'text-center' : 'text-left'}`}>
-      <h2 className={`text-3xl md:text-4xl font-light mb-3 ${lightMode ? 'text-white' : 'text-gray-800'}`}>
+      <h2 className={`text-3xl md:text-4xl font-light mb-3 ${lightMode ? 'text-white' : 'text-pkkc-darkGrey'}`}>
         {title}
       </h2>
       {subtitle && (
@@ -21,7 +21,7 @@ const SectionTitle = ({
           {subtitle}
         </p>
       )}
-      <div className={`h-px w-16 bg-pkkc-primary mt-6 ${alignment === 'center' ? 'mx-auto' : ''}`}></div>
+      <div className={`h-px w-16 bg-pkkc-gold mt-6 ${alignment === 'center' ? 'mx-auto' : ''}`}></div>
     </div>
   );
 };
