@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -7,6 +7,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +45,15 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-pkkc-black/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent py-4'
+        isHomePage 
+          ? (isScrolled ? 'bg-pkkc-black/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent py-4')
+          : 'bg-pkkc-black/95 backdrop-blur-sm shadow-sm py-2'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center" onClick={handleLinkClick('/')}>
           <img 
-            src="/lovable-uploads/bbb6bb24-36d2-4c76-b31b-49d9b71d2cc5.png" 
+            src="/images/logo.jpeg" 
             alt="PK Kalra Consultants Logo" 
             className="h-10 md:h-14" 
           />
@@ -72,7 +76,7 @@ const Header = () => {
           <a href="/contact" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/contact')}>
             Contact
           </a>
-          <Button asChild className="bg-pkkc-gold hover:bg-pkkc-darkGold text-pkkc-black font-light">
+          <Button asChild className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-light border border-black/20">
             <a href="/contact" onClick={handleLinkClick('/contact')}>Book Consultation</a>
           </Button>
         </nav>
@@ -129,7 +133,7 @@ const Header = () => {
               </a>
               <Button 
                 asChild 
-                className="bg-pkkc-gold hover:bg-pkkc-darkGold text-pkkc-black w-full mt-2 font-light"
+                className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-light w-full mt-2 border border-black/20"
               >
                 <a href="/contact" onClick={handleLinkClick('/contact')}>Book Consultation</a>
               </Button>

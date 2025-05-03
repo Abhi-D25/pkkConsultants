@@ -15,8 +15,8 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection>
-            <SectionTitle 
-              title="Welcome to PKKC" 
+            <SectionTitle
+              title="PK Kalra Consultants" 
               subtitle="Engineering Excellence Meets Design Innovation"
             />
           </AnimatedSection>
@@ -230,18 +230,18 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
             <AnimatedSection>
-              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:rotate-1">
-                <h3 className="text-xl font-light mb-6 text-pkkc-darkGold">Our Mission</h3>
-                <p className="text-2xl font-light text-pkkc-primary leading-relaxed">
+              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-300 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:rotate-1">
+                <h3 className="text-xl font-light mb-6 text-pkkc-gold italic">Our Mission</h3>
+                <p className="text-2xl font-light text-pkkc-darkGold leading-relaxed">
                   To deliver sustainable, innovative, and seamlessly integrated design solutions that are functional, aesthetic, and implementable while developing efficient methodologies for successful project execution.
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={200}>
-              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:-rotate-1">
-                <h3 className="text-xl font-light mb-6 text-pkkc-darkGold">Our Vision</h3>
-                <p className="text-2xl font-light text-pkkc-primary leading-relaxed">
+              <div className="p-8 bg-white rounded-lg shadow-sm border border-gray-300 hover:shadow-md transition-all duration-300 h-full flex flex-col transform hover:-translate-y-2 hover:-rotate-1">
+                <h3 className="text-xl font-light mb-6 text-pkkc-gold italic">Our Vision</h3>
+                <p className="text-2xl font-light text-pkkc-darkGold leading-relaxed">
                   To become a leading multidisciplinary design firm, recognized for our holistic approach to architecture and engineering, creating timeless, efficient, and inspiring spaces that stand the test of time.
                 </p>
               </div>

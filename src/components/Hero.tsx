@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
               <DialogTrigger asChild>
-                <Button className="bg-pkkc-gold hover:bg-pkkc-darkGold text-pkkc-black font-normal text-lg px-8 py-6">
+                <Button className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-light text-lg px-8 py-6 border border-black/20">
                   Book a Free Consultation
                 </Button>
               </DialogTrigger>
@@ -51,7 +51,7 @@ const Hero = () => {
                 <ContactForm />
               </DialogContent>
             </Dialog>
-            <Button asChild className="bg-transparent border border-pkkc-gold hover:bg-pkkc-gold/10 text-white font-normal text-lg px-8 py-6">
+            <Button asChild className="bg-transparent border border-white hover:bg-pkkc-darkGold/10 text-pkkc-gold font-light text-lg px-8 py-6 border border-white/20">
               <Link to="/portfolio">View Our Portfolio</Link>
             </Button>
           </div>

@@ -5,12 +5,12 @@ import AnimatedSection from '@/components/AnimatedSection';
 
 const Contact = () => {
   return (
-    <div className="pt-24">
+    <div>
       {/* Contact Hero */}
-      <section className="relative py-20 bg-gray-900">
+      <section className="relative py-40 bg-pkkc-black backdrop-blur-sm">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">Contact</h1>
+            <h1 className="text-4xl md:text-5xl font-light text-pkkc-gold mb-6">Contact</h1>
             <p className="text-xl text-gray-300 font-light">
               Get in touch to discuss your architecture, interior, and MEP requirements.
             </p>
@@ -55,9 +55,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1">Email</h4>
-                      <p className="text-gray-600 font-light">pkkc@pkkalraconsultants.com</p>
-                      <p className="text-gray-600 font-light">kalra.pkumar@pkkalraconsultants.com</p>
-                      <p className="text-gray-600 font-light">poortikalra@pkkalraconsultants.com</p>
+                      <div className="space-y-2">
+                        <p className="text-gray-600 font-light">info.pkkalraconsultants@gmail.com</p>
+                      </div>
                     </div>
                   </div>
                   
@@ -77,7 +77,7 @@ const Contact = () => {
                 <div className="mt-16">
                   <h3 className="text-2xl font-light text-gray-800 mb-6">Connect</h3>
                   <div className="flex space-x-5">
-                    <a href="#" className="bg-gray-50 p-3 text-gray-500 hover:bg-gray-100 transition-colors">
+                    <a href="https://www.linkedin.com/company/pk-kalra-consultants/" className="bg-gray-50 p-3 text-gray-500 hover:bg-gray-100 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>

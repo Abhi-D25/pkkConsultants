@@ -4,12 +4,12 @@ import CTA from '@/components/CTA';
 
 const About = () => {
   return (
-    <div className="pt-20">
+    <div>
       {/* About Hero */}
-      <section className="relative py-20 bg-gray-900">
+      <section className="relative py-40 bg-pkkc-black backdrop-blur-sm">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">About PK Kalra Consultants</h1>
+            <h1 className="text-4xl md:text-5xl font-light text-pkkc-gold mb-6">About PK Kalra Consultants</h1>
             <p className="text-xl text-gray-300 font-light">
               A distinguished engineering and design consulting firm expanding beyond MEP engineering to include Architecture and Interior Design.
             </p>
@@ -31,13 +31,13 @@ const About = () => {
             <AnimatedSection delay={200}>
               <div>
                 <p className="text-lg text-gray-600 mb-6">
-                  Founded in 2002, PKKC has been a trusted name in MEP engineering for over 20 years. Our journey began with a focus on designing sustainable and high-performing building and township systems.
+                  Founded in 2002, PK Kalra Consultants (PKKC) has been a trusted name in MEP engineering for over 23 years. With a strong foundation in delivering technically sound, efficient, and sustainable engineering solutions, we have consistently upheld our commitment to excellence, integrity, and long-term client partnerships.
                 </p>
                 <p className="text-lg text-gray-600 mb-6">
-                  Now, as we expand our expertise into Architecture and Interior Design, we provide clients with an end-to-end solution that integrates design vision with technical excellence.
+                  From the outset, PKKC has focused on providing exceptional service tailored to the unique requirements of each project. Drawing on deep experience across a diverse portfolio, we bring a solutions-driven mindset backed by proven expertise. Our reputation has been built on delivering on promises—on time, on budget, and with the highest standards of professionalism.
                 </p>
                 <p className="text-lg text-gray-600">
-                  By expanding into Architecture and Interior Design, we ensure that our projects are not only structurally efficient but also aesthetically refined and user-centric. Our approach balances functionality, sustainability, and design innovation, making us a true multidisciplinary firm.
+                  Today, PKKC is proud to evolve into a multidisciplinary design and consulting firm, expanding our scope to include Architecture and Interior Design. This strategic growth allows us to offer integrated, end-to-end solutions that merge design creativity with engineering precision. Our holistic approach ensures that every project is not only structurally sound but also aesthetically refined, user-centric, and sustainably designed. With a focus on innovation, functionality, and environmental responsibility, we are committed to shaping spaces that inspire, perform, and endure.
                 </p>
               </div>
             </AnimatedSection>

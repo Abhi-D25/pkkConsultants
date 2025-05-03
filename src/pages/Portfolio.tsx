@@ -77,12 +77,12 @@ const Portfolio = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gray-900 py-20 md:py-28">
+      <section className="bg-pkkc-black backdrop-blur-sm py-40">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-pkkc-gold mb-6">
               Selected Work
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">

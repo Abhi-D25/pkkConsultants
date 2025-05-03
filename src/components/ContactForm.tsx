@@ -49,7 +49,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          className="w-full px-4 py-3 bg-white border border-pkkc-darkGold focus:outline-none focus:ring-1 focus:ring-pkkc-darkGold rounded-lg"
           placeholder="Your Name"
         />
       </div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          className="w-full px-4 py-3 bg-white border border-pkkc-darkGold focus:outline-none focus:ring-1 focus:ring-pkkc-darkGold rounded-lg"
           placeholder="Your Email"
         />
       </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          className="w-full px-4 py-3 bg-white border border-pkkc-darkGold focus:outline-none focus:ring-1 focus:ring-pkkc-darkGold rounded-lg"
           placeholder="Your Phone Number"
         />
       </div>
@@ -95,7 +95,7 @@ const ContactForm = () => {
           value={formData.projectType}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          className="w-full px-4 py-3 bg-white border border-pkkc-darkGold focus:outline-none focus:ring-1 focus:ring-pkkc-darkGold rounded-lg"
         >
           <option value="">Select Project Type</option>
           <option value="MEP Engineering">MEP Engineering</option>
@@ -116,14 +116,14 @@ const ContactForm = () => {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-4 py-3 bg-gray-50 border-0 focus:outline-none focus:ring-1 focus:ring-gray-400"
+          className="w-full px-4 py-3 bg-white border border-pkkc-darkGold focus:outline-none focus:ring-1 focus:ring-pkkc-darkGold rounded-lg"
           placeholder="Tell us about your project"
         ></textarea>
       </div>
       
       <Button 
         type="submit" 
-        className="bg-pkkc-primary hover:bg-pkkc-primary/90 text-white font-light text-lg px-6 py-3 w-full mt-4"
+        className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-light text-lg px-6 py-3 w-full mt-4 border border-black/20"
       >
         Submit
       </Button>

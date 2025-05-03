@@ -5,12 +5,12 @@ import CTA from '@/components/CTA';
 
 const Services = () => {
   return (
-    <div className="pt-20">
+    <div>
       {/* Services Hero */}
-      <section className="relative py-20 bg-gray-900">
+      <section className="relative py-40 bg-pkkc-black backdrop-blur-sm">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-white mb-6">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-light text-pkkc-gold mb-6">Our Services</h1>
             <p className="text-xl text-gray-300 font-light">
               Integrated Architecture, Interior & MEP Solutions for Seamless Design & Execution
             </p>
