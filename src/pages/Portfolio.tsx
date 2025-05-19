@@ -4,27 +4,87 @@ import AnimatedSection from '@/components/AnimatedSection';
 import CTA from '@/components/CTA';
 import { Button } from '@/components/ui/button';
 
+// Updated PortfolioItem component to include more details
 const PortfolioItem = ({ 
   imageSrc, 
-  title, 
+  title,
+  client,
+  buildingType,
+  bua,
+  location,
+  scope,
+  completionYear,
   category 
 }: { 
   imageSrc: string; 
-  title: string; 
+  title: string;
+  client?: string;
+  buildingType?: string;
+  bua?: string;
+  location?: string;
+  scope?: string;
+  completionYear?: string;
   category: string;
 }) => {
   return (
-    <div className="group cursor-pointer relative overflow-hidden">
-      <div className="aspect-w-3 aspect-h-2 bg-gray-100">
+    <div className="group cursor-pointer relative overflow-hidden rounded-lg shadow-md border border-gray-100 flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      <div className="aspect-w-3 aspect-h-2 bg-gray-100 overflow-hidden">
         <img
           src={imageSrc}
           alt={title}
-          className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale-0"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-        <h3 className="text-xl font-light text-white">{title}</h3>
-        <p className="text-gray-300 font-light">{category}</p>
+      <div className="p-6 bg-white flex-grow transition-colors duration-300 group-hover:bg-gray-50">
+        <h3 className="text-xl font-medium text-pkkc-navy mb-3 transition-colors duration-300 group-hover:text-pkkc-gold">{title}</h3>
+        
+        <div className="space-y-2">
+          {client && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">Client:</span>
+              <span className="text-sm text-gray-700 ml-2">{client}</span>
+            </div>
+          )}
+          
+          {buildingType && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">Building Type:</span>
+              <span className="text-sm text-gray-700 ml-2">{buildingType}</span>
+            </div>
+          )}
+          
+          {bua && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">BUA:</span>
+              <span className="text-sm text-gray-700 ml-2">{bua}</span>
+            </div>
+          )}
+          
+          {location && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">Location:</span>
+              <span className="text-sm text-gray-700 ml-2">{location}</span>
+            </div>
+          )}
+          
+          {scope && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">Scope:</span>
+              <span className="text-sm text-gray-700 ml-2">{scope}</span>
+            </div>
+          )}
+          
+          {completionYear && (
+            <div>
+              <span className="text-sm font-medium text-gray-600">Completed:</span>
+              <span className="text-sm text-gray-700 ml-2">{completionYear}</span>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      <div className="absolute top-0 right-0 bg-pkkc-gold text-white px-3 py-1 text-sm font-medium transition-colors duration-300 group-hover:bg-pkkc-darkGold">
+        {category}
       </div>
     </div>
   );
@@ -33,42 +93,79 @@ const PortfolioItem = ({
 const Portfolio = () => {
   const [filter, setFilter] = useState<string>('all');
 
+  // Updated projects data with the information from the revisions
   const projects = [
     {
       id: 1,
-      title: 'Corporate Office MEP Integration',
+      title: '"70 Grandwalk" - Commercial Complex',
+      client: 'SHINE BUILDCON PVT LTD.',
+      buildingType: 'COMMERCIAL',
+      bua: '362000 sft',
+      location: 'Sector-70, Gurugram',
+      scope: 'Consultancy for design of Complete MEP Engineering services',
+      completionYear: '2023',
       category: 'mep',
       imageSrc: '/images/mep-1.jpg'
     },
     {
       id: 2,
-      title: 'Residential Tower HVAC Planning',
+      title: 'RESIDENTIAL PLOTTED COLONY "VERSALIA" AT GURUGRAM',
+      client: 'ANSAL PROJECTS INFRASTRUCTURE LIMITED',
+      buildingType: 'RESIDENTIAL',
+      bua: '104 ACRES',
+      location: 'Gurugram',
+      scope: 'Consultancy for design of Complete MEP Infrastructure (External Development) Engineering services',
+      completionYear: '2009',
       category: 'mep',
       imageSrc: '/images/mep-2.jpg'
     },
     {
       id: 3,
-      title: 'Luxury Retail Complex',
+      title: 'EXTERNAL DEVELOPMENT OF LDEFF PLOTTED COLONY AT MURTHAL',
+      client: 'ANSAL INFRASTRUCTURE LIMITED',
+      buildingType: 'RESIDENTIAL',
+      bua: '218.85 ACRES',
+      location: 'SONIPAT',
+      scope: 'Consultancy for design of Complete MEP Infrastructure (External Development) Engineering services',
+      completionYear: '2012',
       category: 'mep',
       imageSrc: '/images/mep-3.jpg'
     },
     {
       id: 4,
-      title: 'Modern Office Building',
-      category: 'architecture',
-      imageSrc: '/images/mep-1.jpg'
+      title: 'ARG - HIGH END APARTMENTS AT JAIPUR',
+      client: 'ARG DEVELOPERS PVT LTD. JAIPUR',
+      buildingType: 'RESIDENTIAL',
+      bua: '2.75000 SFT',
+      location: 'JAIPUR',
+      scope: 'Consultancy for design of Complete MEP Engineering services',
+      completionYear: '2024',
+      category: 'mep',
+      imageSrc: '/images/mep-4.jpg'
     },
     {
       id: 5,
-      title: 'Community Center Design',
-      category: 'architecture',
-      imageSrc: '/images/mep-2.jpg'
+      title: 'Hotel Fairfield Marriott at GOA',
+      client: 'AA RA HOTELS PVT LTD',
+      buildingType: '171 ROOMS 4 STAR HOTEL',
+      bua: '84000 SFT',
+      location: 'GOA',
+      scope: 'Consultancy for design of Complete MEP Engineering Services',
+      completionYear: '2021',
+      category: 'mep',
+      imageSrc: '/images/mep-5.jpg'
     },
     {
       id: 6,
-      title: 'Boutique Hotel',
-      category: 'architecture',
-      imageSrc: '/images/mep-3.jpg'
+      title: 'RESIDENTIAL TOWNSHIP AT SECTOR-63 GURUGRAM',
+      client: 'ANANT RAJ LIMITED',
+      buildingType: 'RESIDENTIAL TOWNSHIP',
+      bua: '108 ACRES',
+      location: 'SECTOR-63 GURUGRAM',
+      scope: 'Consultancy for design of Complete MEP Engineering Services',
+      completionYear: '2014',
+      category: 'mep',
+      imageSrc: '/images/mep-6.jpg'
     }
   ];
 
@@ -86,7 +183,7 @@ const Portfolio = () => {
               Selected Work
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-light">
-              A curated collection of our integrated architecture, interior, and MEP engineering projects.
+              A curated collection of our MEP engineering projects, with architecture and interior design portfolios coming soon.
             </p>
           </AnimatedSection>
         </div>
@@ -111,31 +208,40 @@ const Portfolio = () => {
               >
                 MEP Projects
               </Button>
+              
+              {/* Disabled Architecture filter with Coming Soon badge */}
               <Button 
-                variant={filter === 'architecture' ? 'default' : 'outline'} 
-                onClick={() => setFilter('architecture')}
-                className={`font-light ${filter === 'architecture' ? 'bg-pkkc-primary text-white' : 'text-gray-700'}`}
-              >
-                Architecture Projects
-              </Button>
-              <Button 
-                variant={filter === 'interior' ? 'default' : 'outline'} 
-                onClick={() => setFilter('interior')}
-                className={`font-light ${filter === 'interior' ? 'bg-pkkc-primary text-white' : 'text-gray-700'}`}
+                variant="outline" 
+                className="font-light text-gray-400 cursor-not-allowed"
                 disabled
               >
-                Interior Design <span className="ml-2 text-xs bg-gray-200 px-2 py-1 rounded text-gray-700">Coming Soon</span>
+                Architecture Projects <span className="ml-2 text-xs bg-gray-200 px-2 py-1 rounded text-gray-500">Coming Soon</span>
+              </Button>
+              
+              {/* Disabled Interior Design filter with Coming Soon badge */}
+              <Button 
+                variant="outline" 
+                className="font-light text-gray-400 cursor-not-allowed"
+                disabled
+              >
+                Interior Design <span className="ml-2 text-xs bg-gray-200 px-2 py-1 rounded text-gray-500">Coming Soon</span>
               </Button>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
               <AnimatedSection key={project.id} delay={project.id * 100}>
                 <PortfolioItem 
                   imageSrc={project.imageSrc}
                   title={project.title}
-                  category={project.category === 'mep' ? 'MEP Engineering' : 'Architecture'}
+                  client={project.client}
+                  buildingType={project.buildingType}
+                  bua={project.bua}
+                  location={project.location}
+                  scope={project.scope}
+                  completionYear={project.completionYear}
+                  category="MEP Engineering"
                 />
               </AnimatedSection>
             ))}
@@ -143,18 +249,34 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Coming Soon Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Enhanced Coming Soon Section */}
+      <section className="py-20 bg-pkkc-light">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <AnimatedSection>
-            <SectionTitle 
-              title="Interior Design Portfolio" 
-              subtitle="Our interior design portfolio will be launching soon. Contact us to learn more about our interior design capabilities and services."
-            />
-            <div className="mt-8">
-              <Button asChild className="bg-pkkc-primary hover:bg-pkkc-primary/90 text-white font-light">
-                <a href="/contact">Inquire About Interior Design</a>
-              </Button>
+            <div className="relative overflow-hidden rounded-lg bg-white p-12 shadow-lg border border-pkkc-gold">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-pkkc-gold opacity-10 rounded-full"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-pkkc-gold opacity-10 rounded-full"></div>
+              
+              <h2 className="text-3xl md:text-4xl font-light text-pkkc-darkGold mb-3 relative">
+                ARCHITECTURE AND INTERIOR DESIGN PORTFOLIO
+              </h2>
+              
+              <div className="w-16 h-1 bg-pkkc-gold mx-auto mb-8"></div>
+              
+              <div className="flex flex-col items-center justify-center">
+                <div className="text-5xl font-bold text-pkkc-gold animate-pulse mb-8">
+                  COMING SOON
+                </div>
+                
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                  Our Architecture and Interior Design portfolio is currently in development. 
+                  Stay tuned for stunning spaces that blend creative vision with engineering precision.
+                </p>
+                
+                <Button asChild className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-normal text-lg px-10 py-6">
+                  <a href="/contact">Book a Free Consultation</a>
+                </Button>
+              </div>
             </div>
           </AnimatedSection>
         </div>
@@ -166,4 +288,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio; 
+export default Portfolio;

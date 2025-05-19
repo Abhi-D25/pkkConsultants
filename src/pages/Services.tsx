@@ -210,45 +210,57 @@ const Services = () => {
             />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection delay={200}>
-              <div>
-                <p className="text-lg text-gray-600 mb-6">
-                  Whether you're a high school student exploring a future in consulting engineering, a recent college graduate, or an experienced professional, PKKC offers a dynamic environment where you can collaborate with a diverse team of innovators and problem solvers.
-                </p>
-                <p className="text-lg text-gray-600 mb-6">
-                  We foster strong connections with colleagues and clients through both professional contributions and social engagement.
-                </p>
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  <div className="bg-gray-50 p-4 rounded">
-                    <h4 className="font-medium text-pkkc-navy mb-2">Work</h4>
-                    <p className="text-gray-600 text-sm">A balance of hard work and smart work.</p>
+          <div className="flex justify-center py-8">
+            <div className="max-w-7xl w-full">
+              <AnimatedSection delay={200}>
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  
+                  <p className="text-lg text-gray-600 mb-6">
+                    Whether you're a high school student exploring a future in consulting engineering, a recent college graduate, or an experienced professional, PKKC offers a dynamic environment where you can collaborate with a diverse team of innovators and problem solvers.
+                  </p>
+                  
+                  <p className="text-lg text-gray-600 mb-6">
+                    We foster strong connections with colleagues and clients through both professional contributions and social engagement.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Work</h4>
+                      <p className="text-gray-600 text-sm">A balance of hard work and smart work.</p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Active</h4>
+                      <p className="text-gray-600 text-sm">A commitment to improving our communities.</p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Engage</h4>
+                      <p className="text-gray-600 text-sm">A deep understanding of our clients' needs.</p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Future</h4>
+                      <p className="text-gray-600 text-sm">A dedication to sustainability and the future of our planet.</p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Balance</h4>
+                      <p className="text-gray-600 text-sm">A belief in maintaining work-life harmony.</p>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
+                      <h4 className="font-medium text-pkkc-navy mb-2">Solution</h4>
+                      <p className="text-gray-600 text-sm">A passion for tackling complex challenges.</p>
+                    </div>
                   </div>
-                  <div className="bg-gray-50 p-4 rounded">
-                    <h4 className="font-medium text-pkkc-navy mb-2">Active</h4>
-                    <p className="text-gray-600 text-sm">A commitment to improving our communities.</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded">
-                    <h4 className="font-medium text-pkkc-navy mb-2">Engage</h4>
-                    <p className="text-gray-600 text-sm">A deep understanding of our clients' needs.</p>
-                  </div>
-                  <div className="bg-gray-50 p-4 rounded">
-                    <h4 className="font-medium text-pkkc-navy mb-2">Balance</h4>
-                    <p className="text-gray-600 text-sm">A belief in maintaining work-life harmony.</p>
-                  </div>
+                  
+                  <p className="text-lg text-gray-600 mt-8 text-center font-medium">
+                    Join us and be part of a team that shapes the future.
+                  </p>
                 </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={300}>
-              <div className="rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/4b008611-433a-4491-b4e1-1f03f43254d1.png" 
-                  alt="Join Our Team" 
-                  className="w-full h-auto" 
-                />
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>

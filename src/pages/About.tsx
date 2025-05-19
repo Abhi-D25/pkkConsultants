@@ -122,19 +122,13 @@ const About = () => {
             />
           </AnimatedSection>
 
-          <AnimatedSection delay={100}>
-            <p className="text-center text-lg text-gray-700 mb-12 max-w-4xl mx-auto font-light">
-              As a father-daughter-led firm, PKKC combines decades of engineering expertise with architectural and interior design innovation. Together, we aim to transform PKKC into a comprehensive design and engineering powerhouse, offering seamless, integrated solutions that cater to both the technical and aesthetic aspects of a project.
-            </p>
-          </AnimatedSection>
-
           {/* Mr. Parveen Kumar Kalra */}
           <AnimatedSection delay={200}>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center mb-16">
               {/* Image Container */}
               <div className="md:col-span-2 w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-xl mx-auto max-w-sm md:max-w-none">
                 <img
-                  src="/images/founder.png" // --- UPDATE PATH AS NEEDED ---
+                  src="/images/founder.jpg" // --- UPDATE PATH AS NEEDED ---
                   alt="Mr. Parveen Kumar Kalra - Founder & CEO"
                   className="w-full h-full object-contain object-center"
                 />
@@ -145,13 +139,10 @@ const About = () => {
                 <p className="text-lg font-medium text-pkkc-gold mb-4">Founder & CEO</p>
                 <div className="text-gray-600 space-y-3 text-base leading-relaxed">
                   <p>
-                    Mr. Kalra is responsible for the firm's strategic focus, growth, and quality initiatives. With over 25 years of experience, he is an expert in design, commissioning, operations, and project management.
+                  Mr. Parveen Kumar Kalra leads the firm’s strategic direction, growth initiatives, and commitment to quality. With over 40+ Years of industry experience, he brings deep expertise in design, project execution, commissioning, and operations. Holding degrees in B.E, M.E, and M.I.E, he has played a pivotal role across sectors including township planning, institutional, industrial, and commercial projects.
                   </p>
                   <p>
-                    His knowledge spans township planning, institutional, industrial, and commercial sectors, complemented by deep expertise in environmental clearance, ISO certifications, and international building standards.
-                  </p>
-                  <p>
-                    A fellow member of the Indian Plumbing Association and a certified chartered engineer, he is committed to delivering sustainable, high-performance designs. He regularly lectures on efficient township planning, Green Buildings, Energy Codes, and System Design.
+                  Mr. Kalra is highly regarded for his proficiency in environmental clearances, ISO certifications, and adherence to international building standards. A Fellow of the Indian Plumbing Association and a certified Chartered Engineer, he is dedicated to creating sustainable, high-performance engineering solutions. He is also an active speaker, sharing his insights on township planning, green buildings, energy codes, and system design with both industry professionals and students.
                   </p>
                 </div>
               </div>
@@ -168,13 +159,10 @@ const About = () => {
                 <p className="text-lg font-medium text-pkkc-gold mb-4">Architect & Interior Designer</p>
                  <div className="text-gray-600 space-y-3 text-base leading-relaxed">
                    <p>
-                     Ms. Kalra holds a Master's degree in Interior Architecture from UCLA, Los Angeles, building upon her Bachelor's in Architecture from Delhi. Her design philosophy is rooted in modern and minimalist principles.
+                   Ms. Poorti Kalra – <b>Architect & Interior Designer</b>, a Master’s graduate in <b>Interior Architecture from UCLA, Los Angeles</b>, with a strong foundation in modern and minimalist design. After completing her Bachelor’s in Architecture in Delhi, she moved to LA to refine her expertise in contemporary and functional design.
                    </p>
                    <p>
-                     She refined her expertise in contemporary and functional design while working in Maryland, USA, successfully managing residential and commercial projects from concept to completion across the Washington, D.C., Maryland, and Virginia (DMV) area.
-                   </p>
-                   <p>
-                     Now back at PKKC, she joins forces with her father, bringing her international experience and design perspective to expand the firm into a comprehensive Architecture, Interior, and MEP practice, aiming to redefine integrated design solutions.
+                   Having worked in Maryland, USA, she has successfully handled and <b>led residential and commercial projects</b> from concept to completion, gaining experience across <b>Washington, D.C., Maryland, and Virginia.</b> Now, she brings her expertise back to PKKC, joining forces with her father to expand the company into a comprehensive <b>Architecture, Interior, and MEP</b> firm.
                    </p>
                  </div>
               </div>
@@ -187,6 +175,13 @@ const About = () => {
                 />
               </div>
             </div>
+          </AnimatedSection>
+
+
+          <AnimatedSection delay={100}>
+            <p className="text-center text-lg text-gray-600 mt-20 max-w-4xl mx-auto italic">
+            Together, we aim to transform PKKC into a <b>comprehensive design and engineering powerhouse</b>, offering <b>seamless, integrated solutions</b> that cater to both the <b>technical and aesthetic</b> aspects of a project.
+            </p>
           </AnimatedSection>
 
         </div>

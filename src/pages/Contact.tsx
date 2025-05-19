@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import SectionTitle from '@/components/SectionTitle';
 import ContactForm from '@/components/ContactForm';
 import AnimatedSection from '@/components/AnimatedSection';
 
+
 const Contact = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
   return (
     <div>
       {/* Contact Hero */}
@@ -32,7 +43,7 @@ const Contact = () => {
                       <MapPin className="text-gray-400" size={24} />
                     </div>
                     <div>
-                      <h4 className="font-light text-lg mb-1">Registered Office</h4>
+                      <h4 className="font-light text-lg mb-1 underline">Registered Office</h4>
                       <p className="text-gray-600 font-light">P.K.Kalra Consultants</p>
                       <p className="text-gray-600 font-light">F-67, Basement, Green Park Main</p>
                       <p className="text-gray-600 font-light">New Delhi-110016</p>
@@ -55,9 +66,53 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1">Email</h4>
-                      <div className="space-y-2">
-                        <p className="text-gray-600 font-light">info.pkkalraconsultants@gmail.com</p>
-                      </div>
+                      
+                      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                        <DialogTrigger asChild>
+                          <Button 
+                            variant="outline" 
+                            className="border-pkkc-darkGold text-pkkc-darkGold hover:bg-pkkc-darkGold/10"
+                          >
+                            View All Email Contacts
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[500px]">
+                          <DialogHeader>
+                            <DialogTitle className="text-xl mb-4 font-light">Contact Email Addresses</DialogTitle>
+                          </DialogHeader>
+                          <div className="space-y-4">
+                            <div className="border-l-4 border-pkkc-gold p-4 bg-gray-50">
+                              <h4 className="font-medium text-pkkc-navy">General Inquiries</h4>
+                              <a 
+                                href="mailto:info.pkkalraconsultants@gmail.com" 
+                                className="text-pkkc-darkGold hover:underline"
+                              >
+                                info.pkkalraconsultants@gmail.com
+                              </a>
+                            </div>
+                            
+                            <div className="border-l-4 border-pkkc-gold p-4 bg-gray-50">
+                              <h4 className="font-medium text-pkkc-navy">MEP Engineering Inquiries</h4>
+                              <a 
+                                href="mailto:pkkalraconsultants@gmail.com" 
+                                className="text-pkkc-darkGold hover:underline"
+                              >
+                                pkkalraconsultants@gmail.com
+                              </a>
+                            </div>
+                            
+                            <div className="border-l-4 border-pkkc-gold p-4 bg-gray-50">
+                              <h4 className="font-medium text-pkkc-navy">Architecture Inquiries</h4>
+                              <a 
+                                href="mailto:poortikalra@pkkalraconsultants.com" 
+                                className="text-pkkc-darkGold hover:underline"
+                              >
+                                poortikalra@pkkalraconsultants.com
+                              </a>
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </div>
                   

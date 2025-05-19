@@ -35,7 +35,7 @@ const Hero = () => {
             Seamless Spaces, Engineered Excellence
           </p>
           <p className="text-lg text-gray-300 mb-12 animate-slide-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            One-stop solutions that blend creative vision with engineering precision.
+            One-stop solution that blends creative vision with engineering precision.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-slide-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
