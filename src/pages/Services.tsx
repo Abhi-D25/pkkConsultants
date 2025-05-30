@@ -7,7 +7,16 @@ const Services = () => {
   return (
     <div>
       {/* Services Hero */}
-      <section className="relative py-40 bg-pkkc-black backdrop-blur-sm">
+      <section className="relative py-44 bg-pkkc-black backdrop-blur-sm">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/sectionBG.png" 
+            alt="Section Background" 
+            className="w-full h-full object-cover opacity-95"
+          />
+          <div className="absolute inset-0 bg-pkkc-black/60"></div>
+        </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-light text-pkkc-gold mb-6">Our Services</h1>
@@ -19,7 +28,7 @@ const Services = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-pkkc-mediumBeige">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection>
             <SectionTitle 
@@ -41,11 +50,11 @@ const Services = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
-              <div className="rounded-lg overflow-hidden">
+              <div className="rounded-xl overflow-hidden max-w-md mx-auto">
                 <img 
-                  src="/lovable-uploads/4b008611-433a-4491-b4e1-1f03f43254d1.png" 
+                  src="/images/services.png" 
                   alt="Engineering Services" 
-                  className="w-full h-auto" 
+                  className="w-full h-full object-cover" 
                 />
               </div>
             </AnimatedSection>
@@ -196,71 +205,6 @@ const Services = () => {
                 </div>
               </div>
             </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* Join Our Team */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection>
-            <SectionTitle 
-              title="Join Our Team" 
-              subtitle="Build your career with PKKC"
-            />
-          </AnimatedSection>
-
-          <div className="flex justify-center py-8">
-            <div className="max-w-7xl w-full">
-              <AnimatedSection delay={200}>
-                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
-                  
-                  <p className="text-lg text-gray-600 mb-6">
-                    Whether you're a high school student exploring a future in consulting engineering, a recent college graduate, or an experienced professional, PKKC offers a dynamic environment where you can collaborate with a diverse team of innovators and problem solvers.
-                  </p>
-                  
-                  <p className="text-lg text-gray-600 mb-6">
-                    We foster strong connections with colleagues and clients through both professional contributions and social engagement.
-                  </p>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Work</h4>
-                      <p className="text-gray-600 text-sm">A balance of hard work and smart work.</p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Active</h4>
-                      <p className="text-gray-600 text-sm">A commitment to improving our communities.</p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Engage</h4>
-                      <p className="text-gray-600 text-sm">A deep understanding of our clients' needs.</p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Future</h4>
-                      <p className="text-gray-600 text-sm">A dedication to sustainability and the future of our planet.</p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Balance</h4>
-                      <p className="text-gray-600 text-sm">A belief in maintaining work-life harmony.</p>
-                    </div>
-                    
-                    <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-pkkc-gold hover:shadow-md transition-shadow">
-                      <h4 className="font-medium text-pkkc-navy mb-2">Solution</h4>
-                      <p className="text-gray-600 text-sm">A passion for tackling complex challenges.</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-gray-600 mt-8 text-center font-medium">
-                    Join us and be part of a team that shapes the future.
-                  </p>
-                </div>
-              </AnimatedSection>
-            </div>
           </div>
         </div>
       </section>

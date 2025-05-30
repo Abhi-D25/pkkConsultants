@@ -52,7 +52,7 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        // Company colors - Darker Gold, Grey, and Black theme
+        // Company colors - Updated with light gold/beige backgrounds
         pkkc: {
           gold: "#B8860B",      // Darker gold (was #D4AF37)
           darkGold: "#8B6914",  // Even darker gold for hover states (was #B8860B)
@@ -62,7 +62,11 @@ export default {
           black: "#121212",     // Almost black for backgrounds
           primary: "#B8860B",   // Primary now uses darker gold
           matte: "#B8860B",     // Matte also uses darker gold
-          light: "#F8F8F8",     // Very light grey for backgrounds
+          light: "#FAF7F2",     // Light beige/cream for main backgrounds
+          cream: "#F5F2E8",     // Slightly darker cream for section backgrounds
+          warmWhite: "#FEFCF7", // Very light warm white for cards
+          darkBeige: "#E8E0D0",  // Darker beige for contrast sections
+          mediumBeige: "#F0EBE0", // Medium beige for alternating sections
         }
       },
       fontFamily: {

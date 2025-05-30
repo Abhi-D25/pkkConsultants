@@ -176,7 +176,16 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-pkkc-black backdrop-blur-sm py-40">
+      <section className="bg-pkkc-black backdrop-blur-sm py-44">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/sectionBG.png" 
+            alt="Section Background" 
+            className="w-full h-full object-cover opacity-95"
+          />
+          <div className="absolute inset-0 bg-pkkc-black/60"></div>
+        </div>
         <div className="container mx-auto px-4 md:px-6 text-center">
           <AnimatedSection>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-pkkc-gold mb-6">

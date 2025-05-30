@@ -6,13 +6,13 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 45 25% 96%; /* Light beige/cream */
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 45 50% 98%; /* Very light warm white for cards */
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 45 50% 98%;
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 0 0% 20%;
@@ -21,17 +21,17 @@
     --secondary: 0 0% 33%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96%;
+    --muted: 45 20% 94%; /* Light beige muted */
     --muted-foreground: 0 0% 40%;
 
-    --accent: 0 0% 96%;
+    --accent: 45 20% 94%;
     --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
+    --border: 45 15% 88%; /* Warm border color */
+    --input: 45 15% 88%;
     --ring: 0 0% 33%;
 
     --radius: 0;
@@ -74,7 +74,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-pkkc-light text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {

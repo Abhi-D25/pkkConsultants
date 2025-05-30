@@ -46,34 +46,37 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isHomePage 
-          ? (isScrolled ? 'bg-pkkc-black/95 backdrop-blur-sm shadow-sm py-2' : 'bg-transparent py-4')
-          : 'bg-pkkc-black/95 backdrop-blur-sm shadow-sm py-2'
+          ? (isScrolled ? 'bg-pkkc-light/95 backdrop-blur-sm shadow-sm py-1' : 'bg-pkkc-light/90 backdrop-blur-sm py-2')
+          : 'bg-pkkc-light/95 backdrop-blur-sm shadow-sm py-1'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center" onClick={handleLinkClick('/')}>
           <img 
-            src="/images/logo.jpeg" 
+            src="/images/logo.png" 
             alt="PK Kalra Consultants Logo" 
-            className="h-10 md:h-14" 
+            className="h-14 md:h-20" 
           />
         </Link>
 
-        {/* Desktop Navigation - Updated colors for better contrast */}
+        {/* Desktop Navigation - Updated colors for dark text on white background */}
         <nav className="hidden md:flex items-center space-x-10">
-          <a href="/" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/')}>
+          <a href="/" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/')}>
             Home
           </a>
-          <a href="/about" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/about')}>
+          <a href="/about" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/about')}>
             About Us
           </a>
-          <a href="/services" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/services')}>
+          <a href="/services" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/services')}>
             Services
           </a>
-          <a href="/portfolio" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/portfolio')}>
+          <a href="/portfolio" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/portfolio')}>
             Portfolio
           </a>
-          <a href="/contact" className="font-light text-white hover:text-pkkc-gold transition-colors" onClick={handleLinkClick('/contact')}>
+          <a href="/careers" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/careers')}>
+            Careers
+          </a>
+          <a href="/contact" className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors" onClick={handleLinkClick('/contact')}>
             Contact
           </a>
           <Button asChild className="bg-pkkc-darkGold hover:bg-pkkc-darkGold/90 text-white font-light border border-black/20">
@@ -83,7 +86,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-pkkc-darkGrey"
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
@@ -93,40 +96,40 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-pkkc-black/95 backdrop-blur-sm shadow-sm">
+        <div className="md:hidden bg-pkkc-light/95 backdrop-blur-sm shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               <a 
                 href="/" 
-                className="font-light text-white hover:text-pkkc-gold transition-colors py-2"
+                className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors py-2"
                 onClick={handleLinkClick('/')}
               >
                 Home
               </a>
               <a 
                 href="/about" 
-                className="font-light text-white hover:text-pkkc-gold transition-colors py-2"
+                className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors py-2"
                 onClick={handleLinkClick('/about')}
               >
                 About Us
               </a>
               <a 
                 href="/services" 
-                className="font-light text-white hover:text-pkkc-gold transition-colors py-2"
+                className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors py-2"
                 onClick={handleLinkClick('/services')}
               >
                 Services
               </a>
               <a 
                 href="/portfolio" 
-                className="font-light text-white hover:text-pkkc-gold transition-colors py-2"
+                className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors py-2"
                 onClick={handleLinkClick('/portfolio')}
               >
-                Portfolio
+                Careers
               </a>
               <a 
                 href="/contact" 
-                className="font-light text-white hover:text-pkkc-gold transition-colors py-2"
+                className="font-light text-pkkc-darkGrey hover:text-pkkc-darkGold transition-colors py-2"
                 onClick={handleLinkClick('/contact')}
               >
                 Contact

@@ -15,14 +15,15 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center">
-      {/* Background image with overlay */}
+      {/* Background image with reduced overlay opacity for more visibility */}
       <div className="absolute inset-0 bg-pkkc-black">
         <img 
           src="/images/hero.webp" 
           alt="PKKC Hero" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-pkkc-black/30 to-pkkc-black/70"></div>
+        {/* Reduced overlay opacity from 70% to 40% for more image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-pkkc-black/20 to-pkkc-black/40"></div>
       </div>
 
       {/* Content */}

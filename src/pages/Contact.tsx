@@ -18,7 +18,16 @@ const Contact = () => {
   return (
     <div>
       {/* Contact Hero */}
-      <section className="relative py-40 bg-pkkc-black backdrop-blur-sm">
+      <section className="relative py-44 bg-pkkc-black backdrop-blur-sm">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/sectionBG.png" 
+            alt="Section Background" 
+            className="w-full h-full object-cover opacity-95"
+          />
+          <div className="absolute inset-0 bg-pkkc-black/60"></div>
+        </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-light text-pkkc-gold mb-6">Contact</h1>
@@ -30,7 +39,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Details and Form */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-pkkc-mediumBeige">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <AnimatedSection>
@@ -39,8 +48,8 @@ const Contact = () => {
                 
                 <div className="space-y-8">
                   <div className="flex items-start">
-                    <div className="bg-gray-50 p-3 mr-5">
-                      <MapPin className="text-gray-400" size={24} />
+                    <div className="p-3 mr-5">
+                      <MapPin className="text-pkkc-darkGold" size={24} />
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1 underline">Registered Office</h4>
@@ -51,8 +60,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-gray-50 p-3 mr-5">
-                      <Phone className="text-gray-400" size={24} />
+                    <div className="p-3 mr-5">
+                      <Phone className="text-pkkc-darkGold" size={24} />
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1">Phone</h4>
@@ -61,8 +70,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-gray-50 p-3 mr-5">
-                      <Mail className="text-gray-400" size={24} />
+                    <div className="p-3 mr-5">
+                      <Mail className="text-pkkc-darkGold" size={24} />
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1">Email</h4>
@@ -117,8 +126,8 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-start">
-                    <div className="bg-gray-50 p-3 mr-5">
-                      <Clock className="text-gray-400" size={24} />
+                    <div className="p-3 mr-5">
+                      <Clock className="text-pkkc-darkGold" size={24} />
                     </div>
                     <div>
                       <h4 className="font-light text-lg mb-1">Business Hours</h4>
@@ -132,19 +141,19 @@ const Contact = () => {
                 <div className="mt-16">
                   <h3 className="text-2xl font-light text-gray-800 mb-6">Connect</h3>
                   <div className="flex space-x-5">
-                    <a href="https://www.linkedin.com/company/pk-kalra-consultants/" className="bg-gray-50 p-3 text-gray-500 hover:bg-gray-100 transition-colors">
+                    <a href="https://www.linkedin.com/company/pk-kalra-consultants/" className="p-3 text-pkkc-gold hover:bg-gray-100 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
                       </svg>
                     </a>
-                    <a href="#" className="bg-gray-50 p-3 text-gray-500 hover:bg-gray-100 transition-colors">
+                    <a href="#" className="p-3 text-pkkc-gold hover:bg-gray-100 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                       </svg>
                     </a>
-                    <a href="#" className="bg-gray-50 p-3 text-gray-500 hover:bg-gray-100 transition-colors">
+                    <a href="#" className="p-3 text-pkkc-gold hover:bg-gray-100 transition-colors">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -157,7 +166,7 @@ const Contact = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={300}>
-              <div className="bg-white p-8 border border-gray-100">
+              <div className="bg-pkkc-mediumBeige p-8 border border-pkkc-darkGold">
                 <h3 className="text-2xl font-light text-gray-800 mb-6">Book a Free Consultation</h3>
                 <ContactForm />
               </div>
