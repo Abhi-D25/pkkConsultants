@@ -1,4 +1,4 @@
-import { Fan, Lightbulb, Droplets, Home, Layers, FileSearch, Award } from 'lucide-react';
+import { Fan, Lightbulb, Droplets, Home, Layers, FileSearch, Award, Calendar, Building2, Repeat } from 'lucide-react';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import ServiceCard from '@/components/ServiceCard';
@@ -43,19 +43,28 @@ const Index = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={400}>
-              <div className="bg-pkkc-darkBeige p-10 rounded-sm">
+              <div className="bg-pkkc-mediumBeige p-10 rounded-sm">
                 <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
-                  <div className="text-center col-span-2">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">25+</h3>
-                    <p className="text-gray-600 font-light">Years Experience</p>
+                  <div className="text-center col-span-2 group">
+                    <div className="relative inline-block">
+                      <Calendar className="w-12 h-12 text-pkkc-primary mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <h3 className="text-5xl font-light text-pkkc-primary mb-3 group-hover:scale-105 transition-transform duration-300">25+</h3>
+                    <p className="text-gray-600 font-light group-hover:text-pkkc-primary transition-colors duration-300">Years Experience</p>
                   </div>
-                  <div className="text-center">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">200+</h3>
-                    <p className="text-gray-600 font-light">Projects Completed</p>
+                  <div className="text-center group">
+                    <div className="relative inline-block">
+                      <Building2 className="w-12 h-12 text-pkkc-primary mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <h3 className="text-5xl font-light text-pkkc-primary mb-3 group-hover:scale-105 transition-transform duration-300">200+</h3>
+                    <p className="text-gray-600 font-light group-hover:text-pkkc-primary transition-colors duration-300">Projects Completed</p>
                   </div>
-                  <div className="text-center">
-                    <h3 className="text-5xl font-light text-pkkc-primary mb-3">90%</h3>
-                    <p className="text-gray-600 font-light">Repeat Business</p>
+                  <div className="text-center group">
+                    <div className="relative inline-block">
+                      <Repeat className="w-12 h-12 text-pkkc-primary mb-4 transform group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <h3 className="text-5xl font-light text-pkkc-primary mb-3 group-hover:scale-105 transition-transform duration-300">90%</h3>
+                    <p className="text-gray-600 font-light group-hover:text-pkkc-primary transition-colors duration-300">Repeat Business</p>
                   </div>
                 </div>
               </div>
